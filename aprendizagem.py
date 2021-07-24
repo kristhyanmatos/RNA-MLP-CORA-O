@@ -39,18 +39,6 @@ class Aprendizagem:
             test_size=0.3,
         )
 
-        print("Quantidade de dados de treino: ", len(self.entradas_treino))
-        print("Quantidade de dados de teste: ", len(self.entradas_teste))
-
-        print("Quantidade de dados de treino e atributos: ", self.entradas_treino.shape)
-        print("Quantidade de dados de teste e atributos: ", self.entradas_teste.shape)
-
-        print("Quantidade de saídas de treino e coluna: ", self.saidas_treino.shape)
-        print("Quantidade de saídas de teste e coluna: ", self.saidas_teste.shape)
-
-        print("min: ", self.saidas_treino.min())
-        print("max: ", self.saidas_treino.max())
-
         self.modelo = keras.Sequential(
             [
                 keras.layers.Dropout(0.14),
@@ -63,13 +51,6 @@ class Aprendizagem:
             loss="sparse_categorical_crossentropy",
             metrics="accuracy",
         )
-
-        # self.hist = self.modelo.fit(
-        #     self.entradas_treino,
-        #     self.saidas_treino,
-        #     epochs=numero_epocas,
-        #     validation_split=0.3,
-        # )
 
         self.hist = self.modelo.fit(
             self.entradas_treino,
@@ -88,10 +69,10 @@ class Aprendizagem:
         plt.legend(["Treino", "Valores de Teste"])
         plt.show()
 
-        # plt.plot(self.hist.history["loss"])
-        # plt.plot(self.hist.history["val_loss"])
-        # plt.title("Taxa de erro por época")
-        # plt.xlabel("Épocas")
-        # plt.ylabel("Taxa de erro")
-        # plt.legend(["Treino", "Valores de Teste"])
-        # plt.show()
+        plt.plot(self.hist.history["loss"])
+        plt.plot(self.hist.history["val_loss"])
+        plt.title("Taxa de erro por época")
+        plt.xlabel("Épocas")
+        plt.ylabel("Taxa de erro")
+        plt.legend(["Treino", "Valores de Teste"])
+        plt.show()

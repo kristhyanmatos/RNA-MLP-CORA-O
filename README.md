@@ -1,4 +1,4 @@
-### Sistema de Avaliação de Aptidão Individual
+### Sistema de Avaliação de cardíaca
 
     Allef Jardim Vieira Fonseca
     FACEEL - Faculdade de Computação e Engenharia Elétrica

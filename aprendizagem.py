@@ -1,6 +1,5 @@
 import pandas
 import tensorflow
-import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow import keras
 from sklearn.model_selection import train_test_split
@@ -71,8 +70,8 @@ class Aprendizagem:
 
         plt.plot(self.hist.history["loss"])
         plt.plot(self.hist.history["val_loss"])
-        plt.title("Taxa de erro por época")
+        plt.title("Taxa de perda por época")
         plt.xlabel("Épocas")
-        plt.ylabel("Taxa de erro")
+        plt.ylabel("Taxa de perda")
         plt.legend(["Treino", "Valores de Teste"])
         plt.show()

@@ -6,7 +6,6 @@ taxa_perda, acuracia = aprendizagem.modelo.evaluate(
     aprendizagem.entradas_teste,
     aprendizagem.saidas_teste,
 )
-aprendizagem.modelo.predict(aprendizagem.entradas_teste)
 
 print("Quantidade de dados de treino: ", len(aprendizagem.entradas_treino))
 print("Quantidade de dados de teste: ", len(aprendizagem.entradas_teste))

@@ -1,4 +1,4 @@
-### Sistema de Avaliação de Cardíaca
+### Sistema de Avaliação de Cardiológica
 
     Allef Jardim Vieira Fonseca
     FACEEL - Faculdade de Computação e Engenharia Elétrica
